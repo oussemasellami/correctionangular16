@@ -1,0 +1,75 @@
+<p>formresidence works!</p>
+<div class="container">
+    <form [formGroup]="residenceform">
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">id</span>
+            </div>
+            <input type="text" aria-label="First name" class="form-control" formControlName="id" >
+          </div>
+          <div *ngIf="id!.touched && id!.invalid" class="alert alert-danger">
+            id residence is required
+            <div *ngIf="id?.hasError('pattern')" class="alert alert-danger">
+                id in [1-9]
+                </div>
+          </div>
+
+        
+         
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">name</span>
+            </div>
+            <input type="text" aria-label="First name" class="form-control" formControlName="name" >
+           <!-- <div class="error-message" *ngIf="isFieldInvalid('name')">
+                <ng-container [ngSwitch]="true">
+                  <span *ngSwitchCase="!!residenceform.get('name')?.errors?.['required']">
+                    Name is required
+                  </span>
+                  <span *ngSwitchCase="!!residenceform.get('name')?.errors?.['invalidName']">
+                    Name can only contain letters (A-Z, a-z)
+                  </span>
+                </ng-container>
+              </div>-->
+
+          </div>
+
+          
+          <<div *ngIf="name!.touched && name!.invalid" class="alert alert-danger">
+            name residence is required
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">adress</span>
+            </div>
+            <input type="text" aria-label="First name" class="form-control" formControlName="adress">
+
+          </div>
+          <div *ngIf="adress!.touched && adress!.invalid" class="alert alert-danger">
+            adress residence is required
+          
+          </div>
+          <div *ngIf="adress?.errors?.['maxlength']" class="alert alert-danger">
+            maximum 10 caractere
+                        </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">image</span>
+            </div>
+            <input type="text" aria-label="First name" class="form-control" formControlName="image">
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">status</span>
+            </div>
+            <input type="text" aria-label="First name" class="form-control" formControlName="status">
+          </div>
+
+          <button class="btn btn-primary" (click)="add()">
+            save
+          </button>
+
+
+    </form>
+
+</div>
