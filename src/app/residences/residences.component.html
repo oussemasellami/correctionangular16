@@ -31,9 +31,17 @@
 
 </div>-->
 
-<input type="text" placeholder="Rechercher par adresse" [(ngModel)]="searchname" />
+<input
+  type="text"
+  placeholder="Rechercher par adresse"
+  [(ngModel)]="searchname"
+/>
 <div class="row">
-  <div *ngFor="let i of filterresidencebyname()" class="card m-3" style="width: 18rem">
+  <div
+    *ngFor="let i of filterresidencebyname()"
+    class="card m-3"
+    style="width: 18rem"
+  >
     <img [src]="i.image" class="card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{ i.name }}</h5>
@@ -49,3 +57,6 @@
     </div>
   </div>
 </div>
+
+<button class="btn btn-primary" (click)="show()">show</button>
+<div *ngIf="somme">la somme est :{{ somme }}</div>

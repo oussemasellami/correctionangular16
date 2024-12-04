@@ -15,7 +15,7 @@ import { AnnanceComponent } from './annance/annance.component';
 import { ListAnnanceComponent } from './annance/list-annance/list-annance.component';
 import { AnnanceModule } from './annance/annance.module';
 import { FormresidenceComponent } from './formresidence/formresidence.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -37,6 +37,7 @@ import { FormresidenceComponent } from './formresidence/formresidence.component'
     ReactiveFormsModule,
     AppRoutingModule,
     AnnanceModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
