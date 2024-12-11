@@ -50,10 +50,12 @@
       <button class="btn btn-primary" (click)="showLocation(i)">
         Show Location
       </button>
+      <a [routerLink]="['/update', i.id]" class="btn btn-primary">Update</a>
       <br />
       <button class="btn btn-outline-primary" (click)="addFavorite(i)">
         {{ isFavorite(i) ? "👎Unlike" : "👍Like" }}
       </button>
+      <button class="btn btn-danger" (click)="delete(i.id)">Delete</button>
     </div>
   </div>
 </div>

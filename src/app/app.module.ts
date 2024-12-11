@@ -16,6 +16,7 @@ import { ListAnnanceComponent } from './annance/list-annance/list-annance.compon
 import { AnnanceModule } from './annance/annance.module';
 import { FormresidenceComponent } from './formresidence/formresidence.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UpadateComponent } from './upadate/upadate.component';
 
 
 
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     NewsComponent,
     NotfoundComponent,
     FormresidenceComponent,
+    UpadateComponent,
   
   ],
   imports: [

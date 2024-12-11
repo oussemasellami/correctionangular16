@@ -1,15 +1,28 @@
-<p>formresidence works!</p>
+<p>upadate works!</p>
+{{ idp }}
+
 <div class="container">
   <form [formGroup]="residenceform">
     <!--<div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">id</span>
-            </div>
-            <input type="text" aria-label="First name" class="form-control" formControlName="id" >
-            <div class="alert alert-danger" *ngIf="residenceform.get('id')?.invalid && (residenceform.get('id')?.dirty || residenceform.get('id')?.touched)">
-              Valid 5-digit id  is required.
-            </div>
-          </div>-->
+      <div class="input-group-prepend">
+        <span class="input-group-text">id</span>
+      </div>
+      <input
+        type="text"
+        aria-label="First name"
+        class="form-control"
+        formControlName="id"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          residenceform.get('id')?.invalid &&
+          (residenceform.get('id')?.dirty || residenceform.get('id')?.touched)
+        "
+      >
+        Valid 5-digit id is required.
+      </div>
+    </div>-->
 
     <div class="input-group">
       <div class="input-group-prepend">
@@ -41,7 +54,7 @@
       />
     </div>
     <div
-      *ngIf="address?.touched && address?.invalid"
+      *ngIf="address?.invalid && address?.touched"
       class="alert alert-danger"
     >
       adress residence is required
@@ -72,12 +85,6 @@
       />
     </div>
 
-    <button
-      class="btn btn-primary"
-      (click)="add()"
-      [disabled]="residenceform!.invalid"
-    >
-      save
-    </button>
+    <button class="btn btn-primary" (click)="update()">update</button>
   </form>
 </div>

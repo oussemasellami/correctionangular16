@@ -1,5 +1,11 @@
 {
-"residence": [
-{"id":1,"name": "El fel","address":"Borj Cedria", "image":"../../assets/images/residence1.jpg", "status": "Disponible"}]
-
+  "residence": [
+    {
+      "id": "1",
+      "name": "El fel",
+      "address": "Borj Cedria",
+      "image": "../../assets/images/residence1.jpg",
+      "status": "Disponible"
+    }
+  ]
 }

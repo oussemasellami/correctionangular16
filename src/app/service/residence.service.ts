@@ -26,15 +26,19 @@ export class ResidenceService {
     return this.http.get<Residence[]>('http://localhost:3000/residence')
   }
   
-  /*getappart():Observable<Apartment[]>{
-    return this.http.get<Apartment[]>('http://localhost:3000/appartement')
+  getresidencebyid(id:any):Observable<Residence[]>{
+    return this.http.get<Residence[]>('http://localhost:3000/residence'+'/'+id)
   }
 
-  addappart(appart:Apartment):Observable<Apartment[]>{
-    return this.http.post<Apartment[]>('http://localhost:3000/appartement',appart)
+
+  addappart(resid:Residence):Observable<Residence[]>{
+    return this.http.post<Residence[]>('http://localhost:3000/residence',resid)
   }
 
-  deleteappart(id:any):Observable<Apartment[]>{
-    return this.http.delete<Apartment[]>('http://localhost:3000/appartement'+'/'+id)
-  }*/
+  deleteappart(id:any):Observable<Residence[]>{
+    return this.http.delete<Residence[]>('http://localhost:3000/residence'+'/'+id)
+  }
+  update(id:any,resid:Residence):Observable<Residence[]>{
+    return this.http.put<Residence[]>('http://localhost:3000/residence'+'/'+id,resid)
+  }
 }

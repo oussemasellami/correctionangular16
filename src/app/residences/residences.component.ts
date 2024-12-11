@@ -58,6 +58,13 @@ export class ResidencesComponent implements OnInit {
    }
 
    filterresidencebyname(){
-    return this.listResidences.filter(residence=>residence.name.toLowerCase().includes(this.searchname.toLowerCase()))
+    return this.listresid.filter(residence=>residence.name.toLowerCase().includes(this.searchname.toLowerCase()))
+   }
+
+   delete(id:any){
+    this.residenceservice.deleteappart(id).subscribe(()=>{
+      console.log("deleted")
+      window.location.reload()
+    })
    }
 }
